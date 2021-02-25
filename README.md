@@ -1,7 +1,7 @@
 ## 手写
 **01-原生方法**
 - [x] [Object.creat](http://itsudo.cn)
-- [ ] new
+- [x] new
 - [ ] call & apply
 - [ ] bind
 - [ ] 柯里化
