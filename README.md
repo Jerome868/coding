@@ -1,3 +1,7 @@
+## 学习网站
+- [现代 JavaScript 教程](https://zh.javascript.info/)
+- [The Modern JavaScript Tutorial](https://javascript.info/)
+
 ## 手写
 **01-原生方法**
 - [x] [Object.creat](http://itsudo.cn)
