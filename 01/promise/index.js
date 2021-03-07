@@ -61,4 +61,42 @@ class Promise {
 
     return p2;
   }
+  static all(promises = []) {
+    let index = 0,
+      result = [];
+    return new Promise((resolve, reject) => {
+      for (let i = 0; i < promises.length; i++) {
+        Promise.resolve(
+          promises[i].then((val) => {
+            index++;
+            result[i] = val;
+            if (index === promises.length) {
+              resolve(result);
+            }
+          }, reject)
+        );
+      }
+    });
+  }
+  static race(promises) {
+    return new Promise((resolve, reject) => {
+      if (promises.length === 0) return;
+
+      for (let i = 0; i < promises.length; i++) {
+        Promise.resolve(
+          promises[i].then((val) => {
+            resolve(val);
+            return;
+          }, reject)
+        );
+      }
+    });
+  }
+  static resolve(result) {
+    if (result instanceof Promise) return result;
+    return new Promise((resolve, reject) => resolve(result));
+  }
+  static reject(error) {
+    return new Promise((resolve, reject) => reject(error));
+  }
 }

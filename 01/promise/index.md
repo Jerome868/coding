@@ -25,3 +25,12 @@ function myAsyncFunction(url) {
 ```
 
 [现代 JavaScript 教程](https://zh.javascript.info/promise-basics)
+
+**要点 💊**
+
+- 构造函数 以及 处理器函数
+- `then` 属性方法
+- 静态函数 `static all` 类可以直接调用
+- 静态函数 `static race`
+- 静态函数 `static resolve`
+- 静态函数 `static reject`
