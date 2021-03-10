@@ -13,7 +13,7 @@
 - [x] bind
 - [x] 柯里化
 - [x] instanceof
-- [ ] promise
+- [x] promise
 
 **02-数组**
 
